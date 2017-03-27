@@ -1,0 +1,113 @@
+<head>
+  <link href="stylesheet.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:700" rel="stylesheet">
+  
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!--angularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  
+  <script src="project-script.js"></script>
+</head>
+<html ng-app="app">
+  <div class="left-nav">
+      <ul class="menu">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+  </div>
+<div class="container-fluid">
+  <div class="header section">
+    <div class="header-wrap">
+      <img src="http://res.cloudinary.com/nwright/image/upload/c_scale,h_345/v1489692284/beach_pjuatb.svg">
+      <h1 id="about">NICHOLAS WRIGHT</h1>
+      <p>FRONT END DEVELOPER | SAN DIEGO, CALIFORNIA</p>
+    </div>
+    <div class="blurb-wrap col-md-12">
+    <div class="about-blurb col-md-9">
+      <p>Highly self-driven ServiceNow developer with a strong analytical nature and a passion for great UI design.
+Excellent understanding of front end web languages and frameworks including HTML5, CSS, Javascript, AngularJS and Jquery. Forward thinker who thrives in environments with constantly changing technical and creative challenges.
+</p>
+      <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      </p>
+      <p>
+      Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+      </p>
+    </div>
+    <div class="right-bar col-md-3">
+      
+      <a href="#">
+        <div class="project hdn" id="resume">
+          <span class="glyphicon glyphicon-file"></span>
+        </div>
+        <p>RESUME</p>
+      </a>
+     
+      <a href="#">
+        <div class="project hdn" id="resume"></div>
+        <p>LINKEDIN</p>
+        
+      </a>
+    </div>
+    </div>
+  </div>
+  
+  <section id="projects" class="section" ng-controller="MyController">
+    <div class="header-wrap">
+      <h1>PROJECTS</h1>
+      <p>Examples of projects and work I have completed so far</p>
+    </div>
+      <div class="project-container">
+      <div class="project hdn" ng-mouseenter="showdiv=!showdiv" ng-mouseleave="showdiv=!showdiv" ng-repeat="item in projects" ng-attr-style="background:url({{item.background}}); background-position:{{item.position}}">
+        {{item.title}}
+        <p ng-class="{'default':!showdiv, 'rollup':showdiv}">
+          {{item.description}}
+        </p>
+     
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="header-wrap">
+      <h1>CONTACT</h1>
+      <p>Currently available for full-time or contract work. Drop me a line!</p>
+    </div>
+    <div class="contact-wrap">
+    <div class="link-section">
+      <p>nicholasw.729@gmail.com</p>
+      <p>San Diego, CA</p>
+      <ul>
+        <li><a href="#">LinkedIn </a>/</li>
+        <li><a href="#"> Twitter </a>/</li>
+        <li><a href="#"> freeCodeCamp</a></li>
+      </ul>
+      
+    </div>
+    <form>
+      <div class="form-group">
+        <div class="input-wrap">
+          <span class="glyphicon glyphicon-user"></span>
+          <input type="text" class="form-control" id="nameInput" placeholder="Your Name">
+        </div>
+        <div class="input-wrap">
+          <span class="glyphicon glyphicon-envelope"></span>
+        <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Your email">
+        </div>
+        <div class="input-wrap">
+          <span class="glyphicon glyphicon-pencil"></span>
+        <textarea type="message" class="form-control" id="emailMessage" placeholder="Your message" rows="5"></textarea>
+      </div>
+        <button id="submit" type="submit" class="project hdn">SUBMIT</button>
+    </form>
+    </div>
+  </section>
+  </div>
+  <div class="footer">
+    <p>Coded By Nicholas Wright</p>
+  </div>
+
+</html>
