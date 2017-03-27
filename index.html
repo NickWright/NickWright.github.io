@@ -68,13 +68,13 @@ Excellent understanding of front end web languages and frameworks including HTML
       <p>Examples of projects and work I have completed so far</p>
     </div>
       <div class="project-container">
-      <div class="project hdn" ng-mouseenter="showdiv=!showdiv" ng-mouseleave="showdiv=!showdiv" ng-repeat="item in projects" ng-attr-style="background:url({{item.background}}); background-position:{{item.position}}" href="{{item.url}}">
+      <a class="project hdn" ng-mouseenter="showdiv=!showdiv" ng-mouseleave="showdiv=!showdiv" ng-repeat="item in projects" ng-attr-style="background:url({{item.background}}); background-position:{{item.position}}" ng-href="{{item.url}}">
         {{item.title}}
         <p ng-class="{'default':!showdiv, 'rollup':showdiv}">
           {{item.description}}
         </p>
      
-      </div>
+      </a>
     </div>
   </section>
 
