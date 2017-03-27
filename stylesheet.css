@@ -42,6 +42,10 @@
   justify-content:space-around;
   flex-direction:column;
 }
+
+.glyphicon{
+  width:24px!important;
+}
 #resume{
   height:75px;
   width:75px;
